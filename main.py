@@ -34,6 +34,8 @@ class Galgame:
 
 class Cfg:
     encoding_list = [
+        'utf-16le',
+        'utf-16be',
         'shift_jis',
         'gb2312',
         'utf-8',
@@ -94,6 +96,7 @@ Windows.entry_str2ce.grid(row=0, column=2)
 
 
 def button_str2ce():
+    Windows.root.clipboard_clear()
     Windows.root.clipboard_append(
         str2ce(
             _s=Windows.entry_str2ce.get(),
